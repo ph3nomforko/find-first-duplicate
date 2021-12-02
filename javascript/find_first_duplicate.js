@@ -1,5 +1,13 @@
 function findFirstDuplicate(arr) {
   // type your code here
+  const values = new Set()
+  for (const value of arr) {
+    if (values.has(value)) {
+      return value
+    }
+    values.add(value)
+  }
+  return -1
 }
 
 if (require.main === module) {
@@ -17,3 +25,8 @@ module.exports = findFirstDuplicate;
 
 // Please add your pseudocode to this file
 // And a written explanation of your solution
+{/*
+  copy array
+  iterate over copied array
+
+  */}
